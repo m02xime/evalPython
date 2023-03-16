@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Informations système</h1>
+        <div class="card">
+            <div class="card-header">
+                <h2>Système d'exploitation</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>OS:</strong> {{ system.os }}</li>
+                    <li><strong>Kernel:</strong> {{ system.kernel }}</li>
+                    <li><strong>Architecture:</strong> {{ system.architecture }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>Processeur</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>CPU:</strong> {{ system.cpu }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>Network</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><strong>Hostname:</strong> {{ system.hostname }}</li>
+                    <li><strong>IP:</strong> {{ request.remote_addr }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
